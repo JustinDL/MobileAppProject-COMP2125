@@ -13,6 +13,8 @@
 		ED840BFD24C6743400588981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED840BFB24C6743400588981 /* Main.storyboard */; };
 		ED840BFF24C6743500588981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED840BFE24C6743500588981 /* Assets.xcassets */; };
 		ED840C0224C6743500588981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED840C0024C6743500588981 /* LaunchScreen.storyboard */; };
+		EDE5A3D424C77B5600F4DA3E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5A3D324C77B5600F4DA3E /* TableViewCell.swift */; };
+		EDE5A3D624C7846B00F4DA3E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE5A3D524C7846B00F4DA3E /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		ED840BFE24C6743500588981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED840C0124C6743500588981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED840C0324C6743500588981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDE5A3D324C77B5600F4DA3E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		EDE5A3D524C7846B00F4DA3E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				ED840BF524C6743400588981 /* AppDelegate.swift */,
 				ED840BF724C6743400588981 /* SceneDelegate.swift */,
+				EDE5A3D524C7846B00F4DA3E /* ProductDetailViewController.swift */,
+				EDE5A3D324C77B5600F4DA3E /* TableViewCell.swift */,
 				ED840BF924C6743400588981 /* ViewController.swift */,
 				ED840BFB24C6743400588981 /* Main.storyboard */,
 				ED840BFE24C6743500588981 /* Assets.xcassets */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED840BFA24C6743400588981 /* ViewController.swift in Sources */,
+				EDE5A3D424C77B5600F4DA3E /* TableViewCell.swift in Sources */,
+				EDE5A3D624C7846B00F4DA3E /* ProductDetailViewController.swift in Sources */,
 				ED840BF624C6743400588981 /* AppDelegate.swift in Sources */,
 				ED840BF824C6743400588981 /* SceneDelegate.swift in Sources */,
 			);
