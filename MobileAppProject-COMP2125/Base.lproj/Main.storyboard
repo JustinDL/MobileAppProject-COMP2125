@@ -183,6 +183,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b5p-k4-XbB">
+                                <rect key="frame" x="142" y="818" width="131" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeMapType:" destination="Ihj-J2-tFV" eventType="valueChanged" id="l7X-Il-a5U"/>
+                                </connections>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqU-SQ-r5K">
                                 <rect key="frame" x="0.0" y="51" width="414" height="49"/>
                                 <constraints>
@@ -228,6 +240,7 @@
                         <outlet property="ItemName" destination="qqU-SQ-r5K" id="MdC-NR-UqP"/>
                         <outlet property="ItemPic" destination="YGB-2h-teQ" id="ZKg-qb-z31"/>
                         <outlet property="ItemPrice" destination="MXZ-VP-Hmu" id="D3g-gV-6KR"/>
+                        <outlet property="MapView" destination="OGa-3F-ZqL" id="kf7-Bg-KR9"/>
                         <outlet property="SellerName" destination="dvu-qO-NvY" id="DLK-6r-VUB"/>
                         <outlet property="SellerNum" destination="6dd-Bp-ZJj" id="fYP-bk-WqO"/>
                     </connections>

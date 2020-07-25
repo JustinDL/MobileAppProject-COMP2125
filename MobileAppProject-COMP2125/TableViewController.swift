@@ -15,7 +15,8 @@ class TableViewController: UITableViewController {
     let images = ["iPhone", "Samsung", "Pixel", "Vivo"]
     let sellName = ["Justin", "Birhanu", "Sujeet", "Anon"]
     let sellNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654-0987"]
-
+    let sellLat = [44.33, 44.38, 43.69, 43.63]
+    let sellLong = [-79.69, -79.68, -79.57, -79.38]
     // outlets
     
     override func viewDidLoad() {
@@ -47,6 +48,8 @@ class TableViewController: UITableViewController {
         detailVC.itemPic = UIImage(named: images[indexPath.row] + ".jpg" )!
         detailVC.sellerName = sellName[indexPath.row]
         detailVC.sellerNum = sellNum[indexPath.row]
+        detailVC.sellerLat = sellLat[indexPath.row]
+        detailVC.sellerLong = sellLong[indexPath.row]
         // make it navigate to ProductDetailViewController
         self.navigationController?.pushViewController(detailVC, animated: true)
     }

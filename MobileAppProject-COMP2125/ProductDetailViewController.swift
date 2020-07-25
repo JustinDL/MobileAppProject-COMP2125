@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+
 
 class ProductDetailViewController: UIViewController {
 
@@ -21,7 +23,8 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var SellerName: UILabel!
     // phone number of seller
     @IBOutlet weak var SellerNum: UILabel!
-    
+    // map outlet
+    @IBOutlet weak var MapView: MKMapView!
     
     // local variables
     var itemName:String!
@@ -29,6 +32,15 @@ class ProductDetailViewController: UIViewController {
     var itemPic:UIImage!
     var sellerName:String!
     var sellerNum:String!
+    
+    // variables for map coords
+    var sellerLat:Double!
+    var sellerLong:Double!
+    
+    
+    // map variables
+    var locationCoordinates:CLLocationCoordinate2D = CLLocationCoordinate2D.init(latitude: 0, longitude: 0)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,18 +52,44 @@ class ProductDetailViewController: UIViewController {
         SellerName.text = sellerName
         SellerNum.text = sellerNum
         
+        
+        // run map functions
+        setUpLocation()
+        setUpAnnonation()
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // function to change map from satellite or normal view
+    @IBAction func changeMapType(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            MapView.mapType = .standard
+        }
+        else {
+            MapView.mapType = .satellite
+        }
     }
-    */
+    
+    
+    // sets location of map pin
+    private func setUpLocation()
+    {
+        let locationSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        locationCoordinates = CLLocationCoordinate2DMake(sellerLat, sellerLong)
+        let locationRegion = MKCoordinateRegion(center: locationCoordinates, span: locationSpan)
+        MapView.setRegion(locationRegion, animated: true)
+        
+    } // end func...
+
+    // creates an annotation on the pin on the map
+    private func setUpAnnonation()
+    {
+    let annotation = MKPointAnnotation() // object of MKPointAnnotation class
+    annotation.coordinate = locationCoordinates // assigning the location coordinates to annotation object
+    annotation.title = "Seller Location"
+    annotation.subtitle = "Call to arrange meeting!"
+    MapView.addAnnotation(annotation)
+    } // end func...
+    
 
 }
