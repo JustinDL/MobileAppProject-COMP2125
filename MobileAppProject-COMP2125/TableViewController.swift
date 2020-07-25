@@ -13,8 +13,8 @@ class TableViewController: UITableViewController {
     let productList = ["iPhone", "Galaxy", "Pixel3", "Vivo"]
     let priceList = ["1250.00", "1100.00", "899.00", "750.00"]
     let images = ["iPhone", "Samsung", "Pixel", "Vivo"]
-    let sellerName = ["Justin", "Birhanu", "Sujeet", "Anon"]
-    let sellerNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654"]
+    let sellName = ["Justin", "Birhanu", "Sujeet", "Anon"]
+    let sellNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654-0987"]
 
     // outlets
     
@@ -45,6 +45,8 @@ class TableViewController: UITableViewController {
         detailVC.itemName = productList[indexPath.row]
         detailVC.itemPrice = priceList[indexPath.row]
         detailVC.itemPic = UIImage(named: images[indexPath.row] + ".jpg" )!
+        detailVC.sellerName = sellName[indexPath.row]
+        detailVC.sellerNum = sellNum[indexPath.row]
         // make it navigate to ProductDetailViewController
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
