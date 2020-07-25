@@ -8,11 +8,14 @@
 
 import UIKit
 
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableViewController: UITableViewController {
     // define an array of values ..which you want to be displayed
     let productList = ["iPhone", "Galaxy", "Pixel3", "Vivo"]
     let priceList = ["1250.00", "1100.00", "899.00", "750.00"]
     let images = ["iPhone", "Samsung", "Pixel", "Vivo"]
+    let sellerName = ["Justin", "Birhanu", "Sujeet", "Anon"]
+    let sellerNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654"]
+
     // outlets
     
     override func viewDidLoad() {
@@ -21,13 +24,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     // return how many rows in the table
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return productList.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return productList.count
     } // end func tableview
      // return the cell
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-     {
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let tempCell:TableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         tempCell.ItemName.text = productList[indexPath.row]
         tempCell.ItemPrice.text = priceList[indexPath.row]
@@ -36,7 +39,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return tempCell
     } // end func tableView
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC:ProductDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as! ProductDetailViewController
        // assign the values to the local variable declared in ProductDetailViewController Class
         detailVC.itemName = productList[indexPath.row]

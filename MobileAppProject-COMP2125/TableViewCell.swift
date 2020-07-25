@@ -12,13 +12,12 @@ class TableViewCell: UITableViewCell {
 
     
     //inner cell outlets
-    // name of listed item
+    //
     @IBOutlet weak var ItemName: UILabel!
-    // price of listed item
-    @IBOutlet weak var ItemPrice: UILabel!
-    // one picture of listed item
-    @IBOutlet weak var ItemPic: UIImageView!
     
+    @IBOutlet weak var ItemPrice: UILabel!
+    
+    @IBOutlet weak var ItemPic: UIImageView!
     
     
     override func awakeFromNib() {
