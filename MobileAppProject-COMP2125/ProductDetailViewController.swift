@@ -72,6 +72,7 @@ class ProductDetailViewController: UIViewController {
     
     
     // sets location of map pin
+    // coordinates for lat/long are stored in variables so they can change depending on listing chosen
     private func setUpLocation()
     {
         let locationSpan = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)

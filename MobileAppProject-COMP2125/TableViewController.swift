@@ -10,13 +10,13 @@ import UIKit
 
 class TableViewController: UITableViewController {
     // define an array of values ..which you want to be displayed
-    let productList = ["iPhone", "Galaxy", "Pixel3", "Vivo"]
-    let priceList = ["1250.00", "1100.00", "899.00", "750.00"]
-    let images = ["iPhone", "Samsung", "Pixel", "Vivo"]
-    let sellName = ["Justin", "Birhanu", "Sujeet", "Anon"]
-    let sellNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654-0987"]
-    let sellLat = [44.33, 44.38, 43.69, 43.63]
-    let sellLong = [-79.69, -79.68, -79.57, -79.38]
+    var productList = ["iPhone", "Galaxy", "Pixel3", "Vivo"]
+    var priceList = ["1250.00", "1100.00", "899.00", "750.00"]
+    var images = ["iPhone", "Samsung", "Pixel", "Vivo"]
+    var sellName = ["Justin", "Birhanu", "Sujeet", "Anon"]
+    var sellNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654-0987"]
+    var sellLat = [44.33, 44.38, 43.69, 43.63]
+    var sellLong = [-79.69, -79.68, -79.57, -79.38]
     // outlets
     
     override func viewDidLoad() {
