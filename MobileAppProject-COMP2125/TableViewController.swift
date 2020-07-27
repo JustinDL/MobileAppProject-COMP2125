@@ -11,7 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
     // define an array of values ..which you want to be displayed
     var productList = ["iPhone", "Galaxy", "Pixel3", "Vivo"]
-    var priceList = ["1250.00", "1100.00", "899.00", "750.00"]
+    var priceList = ["$1250.00", "$1100.00", "$899.00", "$750.00"]
     var images = ["iPhone", "Samsung", "Pixel", "Vivo"]
     var sellName = ["Justin", "Birhanu", "Sujeet", "Anon"]
     var sellNum = ["123-456-7890", "123-456-0987", "123-654-7890", "123-654-0987"]
