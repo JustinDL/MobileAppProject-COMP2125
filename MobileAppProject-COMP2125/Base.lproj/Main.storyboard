@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="prh-bF-AGH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8yX-hu-ouf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="-4672.463768115942" y="-261.16071428571428"/>
         </scene>
-        <!--Product Detail View Controller-->
+        <!--Details-->
         <scene sceneID="LOc-yJ-aZg">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailViewController" id="Ihj-J2-tFV" customClass="ProductDetailViewController" customModule="MobileAppProject_COMP2125" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailViewController" title="Details" id="Ihj-J2-tFV" customClass="ProductDetailViewController" customModule="MobileAppProject_COMP2125" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eHD-9M-bfy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="q9w-xD-82Q" firstAttribute="top" secondItem="EuG-Li-vZm" secondAttribute="bottom" constant="25" id="49f-CU-Ao4"/>
                             <constraint firstItem="EuG-Li-vZm" firstAttribute="leading" secondItem="q9w-xD-82Q" secondAttribute="leading" id="7F0-aN-SLv"/>
@@ -249,14 +249,14 @@
             </objects>
             <point key="canvasLocation" x="-2452.1739130434785" y="433.92857142857139"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Electronics-->
         <scene sceneID="Lme-b8-TIT">
             <objects>
                 <tableViewController storyboardIdentifier="TableViewController" id="CHI-P5-Khh" customClass="TableViewController" customModule="MobileAppProject_COMP2125" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jgm-fj-afB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="158" id="ptR-vW-hyR" customClass="TableViewCell" customModule="MobileAppProject_COMP2125" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="158"/>
@@ -312,7 +312,7 @@
                             <outlet property="delegate" destination="CHI-P5-Khh" id="OmY-0V-hgg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gYM-z0-cep"/>
+                    <navigationItem key="navigationItem" title="Electronics" id="gYM-z0-cep"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEg-LD-USO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -378,6 +378,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYo-7I-O9K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3217.3913043478265" y="-261.16071428571428"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="Icj-Pj-dQu">
+            <objects>
+                <tableViewController storyboardIdentifier="CatTableViewController" title="Categories" id="jAi-AY-wka" customClass="CatTableViewController" customModule="MobileAppProject_COMP2125" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0By-j5-pcV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="98" id="Yrx-6S-hHU" customClass="CatTableViewCell" customModule="MobileAppProject_COMP2125" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="98"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yrx-6S-hHU" id="Ceh-xg-0wN">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSa-vV-28l">
+                                            <rect key="frame" x="62" y="26" width="186" height="56"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="186" id="ga4-GQ-s4V"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LSa-vV-28l" firstAttribute="leading" secondItem="Ceh-xg-0wN" secondAttribute="leadingMargin" constant="42" id="1aP-xC-00M"/>
+                                        <constraint firstItem="LSa-vV-28l" firstAttribute="top" secondItem="Ceh-xg-0wN" secondAttribute="topMargin" constant="15" id="6Ke-RX-sWl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="LSa-vV-28l" secondAttribute="bottom" constant="5" id="LGj-hA-cjG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelCategory" destination="LSa-vV-28l" id="KWP-7j-vTe"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jAi-AY-wka" id="DJD-7o-8c8"/>
+                            <outlet property="delegate" destination="jAi-AY-wka" id="INm-Kn-NZL"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CC-5a-YBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2288.4057971014495" y="-261.16071428571428"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="X5L-is-Kfd">
@@ -448,9 +495,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOb-06-3ma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2452.1739130434785" y="-261.16071428571428"/>
+            <point key="canvasLocation" x="-597.10144927536237" y="-261.16071428571428"/>
         </scene>
-        <!--Reg View Controller-->
+        <!--Register-->
         <scene sceneID="qKQ-QM-96a">
             <objects>
                 <viewController storyboardIdentifier="RegViewController" id="JnF-ev-jSk" customClass="RegViewController" customModule="MobileAppProject_COMP2125" customModuleProvider="target" sceneMemberID="viewController">
@@ -574,7 +621,7 @@
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="H70-d5-hBf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fdh-sg-QpR"/>
+                    <navigationItem key="navigationItem" title="Register" id="PHu-Sa-iGQ"/>
                     <connections>
                         <outlet property="labelRegOutput" destination="u9u-em-AGj" id="POE-6O-hwn"/>
                         <outlet property="txtEmail" destination="s6j-gQ-8Hz" id="QnO-5N-dqs"/>

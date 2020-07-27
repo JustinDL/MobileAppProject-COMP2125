@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C63DFDD524CE841200103548 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63DFDD424CE841200103548 /* CatTableViewCell.swift */; };
+		C63DFDD724CE843400103548 /* CatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63DFDD624CE843400103548 /* CatTableViewController.swift */; };
 		C646B00824CA8A4200967206 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646B00724CA8A4200967206 /* RegViewController.swift */; };
 		C646B00A24CAA6C800967206 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646B00924CAA6C800967206 /* CatViewController.swift */; };
 		C646B00C24CADC0000967206 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C646B00B24CADC0000967206 /* ListViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C63DFDD424CE841200103548 /* CatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
+		C63DFDD624CE843400103548 /* CatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewController.swift; sourceTree = "<group>"; };
 		C646B00724CA8A4200967206 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
 		C646B00924CAA6C800967206 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		C646B00B24CADC0000967206 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				ED840C0024C6743500588981 /* LaunchScreen.storyboard */,
 				ED840C0324C6743500588981 /* Info.plist */,
 				C646B00B24CADC0000967206 /* ListViewController.swift */,
+				C63DFDD424CE841200103548 /* CatTableViewCell.swift */,
+				C63DFDD624CE843400103548 /* CatTableViewController.swift */,
 			);
 			path = "MobileAppProject-COMP2125";
 			sourceTree = "<group>";
@@ -158,7 +164,9 @@
 			files = (
 				ED840BFA24C6743400588981 /* LoginViewController.swift in Sources */,
 				C646B00A24CAA6C800967206 /* CatViewController.swift in Sources */,
+				C63DFDD524CE841200103548 /* CatTableViewCell.swift in Sources */,
 				EDE5A3D824C79D0A00F4DA3E /* TableViewController.swift in Sources */,
+				C63DFDD724CE843400103548 /* CatTableViewController.swift in Sources */,
 				EDE5A3D424C77B5600F4DA3E /* TableViewCell.swift in Sources */,
 				EDE5A3D624C7846B00F4DA3E /* ProductDetailViewController.swift in Sources */,
 				C646B00C24CADC0000967206 /* ListViewController.swift in Sources */,

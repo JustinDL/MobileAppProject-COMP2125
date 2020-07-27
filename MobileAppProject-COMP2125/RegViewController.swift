@@ -37,9 +37,9 @@ class RegViewController: UIViewController {
             regEmail = "Invalid email!"
         }
         else {
-            let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatViewController") as! CatViewController
+            let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatTableViewController") as! CatTableViewController
             self.navigationController?.pushViewController(catVC, animated: true)
-            catVC.user = txtUName.text! + "!"
+            //catVC.user = txtUName.text! + "!"
         }
 
         regMessage = regEmail

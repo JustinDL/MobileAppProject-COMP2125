@@ -33,9 +33,9 @@ class LoginViewController: UIViewController {
         pWord = (txtPassword.text!)
         if(uName.count > 1) {
             if(pWord.count > 3) {
-                let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatViewController") as! CatViewController
+                let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatTableViewController") as! CatTableViewController
                 self.navigationController?.pushViewController(catVC, animated: true)
-                catVC.user = txtUsername.text! + "!"
+                //catVC.user = txtUsername.text! + "!"
             }
             else {
                 messageP = "Invalid password!"
