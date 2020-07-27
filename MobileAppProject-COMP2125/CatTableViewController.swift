@@ -11,7 +11,7 @@ import UIKit
 class CatTableViewController: UITableViewController {
 
     // define an array of values ..which you want to be displayed
-        let catList = ["Textbooks", "Electronics", "Furniture", "Cars","Tutors", "Room rental", "Free items"]
+    let catList = ["Textbooks", "Electronics", "Furniture", "Cars","Tutors", "Room rental", "Free items", "Discussion"]
         //let priceList = ["1250.00", "1100.00", "899.00", "750.00"]
         //let images = ["iPhone", "Samsung", "Pixel", "Vivo"]
         //let sellName = ["Justin", "Birhanu", "Sujeet", "Anon"]
