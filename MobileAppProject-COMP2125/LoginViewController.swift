@@ -39,12 +39,18 @@ class LoginViewController: UIViewController {
             }
             else {
                 messageP = "Invalid password!"
+                txtPassword.text = ""
             }
         }
             else {
                 messageU = "Invalid user name!"
+                txtUsername.text = ""
             }
         message = messageU + messageP
+        if(message==""){
+            txtUsername.text = ""
+            txtPassword.text = ""
+        }
         labelOutput.text = String(message)
         messageP = ""
         messageU = ""
