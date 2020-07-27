@@ -41,8 +41,16 @@ class RegViewController: UIViewController {
             self.navigationController?.pushViewController(catVC, animated: true)
             //catVC.user = txtUName.text! + "!"
         }
-
+        // clear user information once they navigate away from the page
         regMessage = regEmail
+        if(regMessage==""){
+            txtFullName.text = ""
+            txtEmail.text = ""
+            txtStreet.text = ""
+            txtPostalCode.text = ""
+            txtUName.text = ""
+            txtPword.text = ""
+        }
         labelRegOutput.text = String(regMessage)
         regEmail = ""
     }

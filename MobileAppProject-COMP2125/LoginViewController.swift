@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         uName = (txtUsername.text!)
         pWord = (txtPassword.text!)
         if(uName.count > 1) {
-            if(pWord.count > 3) {
+            if(pWord.count > 6) {
                 let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatTableViewController") as! CatTableViewController
                 self.navigationController?.pushViewController(catVC, animated: true)
                 //catVC.user = txtUsername.text! + "!"
@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
                 txtUsername.text = ""
             }
         message = messageU + messageP
+        // clear user credentials once they navigates away from the page
         if(message==""){
             txtUsername.text = ""
             txtPassword.text = ""
