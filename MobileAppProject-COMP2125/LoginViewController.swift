@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     @IBAction func btnLoginTapped(_ sender: UIButton) {
         uName = (txtUsername.text!)
         pWord = (txtPassword.text!)
+        // validate each input one by one and display error if there is any
         if(uName.count > 1) {
             if(pWord.count > 6) {
                 let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatTableViewController") as! CatTableViewController
@@ -42,16 +43,17 @@ class LoginViewController: UIViewController {
                 txtPassword.text = ""
             }
         }
-            else {
-                messageU = "Invalid user name!"
-                txtUsername.text = ""
-            }
+        else {
+            messageU = "Invalid user name!"
+            txtUsername.text = ""
+        }
         message = messageU + messageP
         // clear user credentials once they navigates away from the page
         if(message==""){
             txtUsername.text = ""
             txtPassword.text = ""
         }
+        // show error message and clear error fields for subsequent messages
         labelOutput.text = String(message)
         messageP = ""
         messageU = ""

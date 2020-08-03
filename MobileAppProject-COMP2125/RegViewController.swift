@@ -20,8 +20,18 @@ class RegViewController: UIViewController {
     @IBOutlet weak var labelRegOutput: UILabel!
     
     // local variables
+    var fName:String = ""
     var email:String = ""
+    var street:String = ""
+    var poCode:String = ""
+    var userName:String = ""
+    var password:String = ""
+    var regFn:String = ""
     var regEmail:String = ""
+    var regSt:String = ""
+    var regPo:String = ""
+    var regUn:String = ""
+    var regPw:String = ""
     var regMessage:String = ""
 
     override func viewDidLoad() {
@@ -32,18 +42,61 @@ class RegViewController: UIViewController {
     
     // actions
     @IBAction func btnSubmitTapped(_ sender: UIButton) {
+        
+        fName = (txtFullName.text!)
         email = (txtEmail.text!)
-        if(!email.contains("@mygeorgian.ca") && !email.contains("@student.georgianc.on.ca")) {
-            regEmail = "Invalid email!"
+        street = (txtStreet.text!)
+        poCode = (txtPostalCode.text!)
+        userName = (txtUName.text!)
+        password = (txtPword.text!)
+        // validate each input one by one, display the error if there is any, and clear the erroneous field
+        if(fName.contains(" ")) {
+            if(fName.contains(" ") && fName.count > 4) {
+                if(email.contains("@mygeorgian.ca") || email.contains("@student.georgianc.on.ca")) {
+                    if(street.count > 5) {
+                        if((poCode.contains(" ") && poCode.count == 7) || (!poCode.contains(" ") && poCode.count == 6)) {
+                            if (userName.count > 1) {
+                                if (password.count > 5) {
+                                    let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatTableViewController") as! CatTableViewController
+                                     self.navigationController?.pushViewController(catVC, animated: true)
+                                }
+                                else {
+                                    regPw = "Invalid password"
+                                    txtPword.text=""
+                                }
+                            }
+                            else {
+                                regUn = "Invalid user name"
+                                txtUName.text = ""
+                            }
+                        }
+                        else {
+                            regPo = "Invalid postal code"
+                            txtPostalCode.text = ""
+                        }
+                    }
+                    else {
+                        regSt = "Invalid street"
+                        txtStreet.text = ""
+                    }
+                }
+                else {
+                    regEmail = "Invalid email!"
+                    txtEmail.text = ""
+                }
+            }
+            else {
+                regFn = "Invalid name"
+                txtFullName.text = ""
+            }
         }
         else {
-            let catVC = self.storyboard?.instantiateViewController(withIdentifier:"CatTableViewController") as! CatTableViewController
-            self.navigationController?.pushViewController(catVC, animated: true)
-            //catVC.user = txtUName.text! + "!"
+            regFn = "Please provide full name"
+            txtFullName.text = ""
         }
         // clear user information once they navigate away from the page
-        regMessage = regEmail
-        if(regMessage==""){
+        regMessage = regFn + regEmail + regSt + regPo + regUn + regPw
+        if(regMessage == "") {
             txtFullName.text = ""
             txtEmail.text = ""
             txtStreet.text = ""
@@ -51,18 +104,13 @@ class RegViewController: UIViewController {
             txtUName.text = ""
             txtPword.text = ""
         }
+        // show error message and clear error fields for subsequent messages
         labelRegOutput.text = String(regMessage)
+        regFn = ""
         regEmail = ""
+        regSt = ""
+        regPo = ""
+        regUn = ""
+        regPw = ""
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
