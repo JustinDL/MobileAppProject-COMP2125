@@ -68,7 +68,7 @@ class RegViewController: UIViewController {
                                     userDict.updateValue(userName, forKey: "user name")
                                     userDict.updateValue(password, forKey: "password")
                                     userArray.append(userDict as! [String : String])
-                                    //print(userArray)
+                                    //print(userArray) //to debug
                                     // redirect user back to login page to sign in
                                     let loginVC = self.storyboard?.instantiateViewController(withIdentifier:"LoginViewController") as! LoginViewController
                                     // pass registered users array
@@ -96,7 +96,7 @@ class RegViewController: UIViewController {
                     }
                 }
                 else {
-                    regEmail = "Invalid email"
+                    regEmail = "Georgian student email required"
                     txtEmail.text = ""
                 }
             }

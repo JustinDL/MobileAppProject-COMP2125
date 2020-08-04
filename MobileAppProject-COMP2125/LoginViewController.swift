@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         uName = txtUsername.text!
         pWord = txtPassword.text!
         var t:Int = -1
-        //print(regUsers)
+        //print(regUsers) //to debug
         for i in 0..<regUsers.count {
         // check if the user name exists
             if(uName == (regUsers[i]["user name"]!)) {
